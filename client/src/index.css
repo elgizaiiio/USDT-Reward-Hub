@@ -42,8 +42,8 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Cairo', sans-serif;
-    direction: rtl;
+    font-family: 'Inter', sans-serif;
+    direction: ltr;
     background-image: 
       radial-gradient(circle at 15% 50%, rgba(38, 161, 123, 0.08) 0%, transparent 50%),
       radial-gradient(circle at 85% 30%, rgba(0, 152, 234, 0.08) 0%, transparent 50%);
