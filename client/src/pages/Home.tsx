@@ -22,14 +22,15 @@ export default function Home() {
 
   const handleWithdrawClick = () => {
     if (!userAddress) {
-      const button = document.querySelector('button[class*="ton-connect-button"]');
-      if (button instanceof HTMLElement) {
-        button.click();
+      const tonConnectButton = document.querySelector('button[class*="ton-connect-button"]');
+      if (tonConnectButton instanceof HTMLElement) {
+        tonConnectButton.click();
       } else {
+        // Fallback to searching inside the trigger div
         const trigger = document.getElementById('ton-connect-trigger');
-        if (trigger) {
-          const actualButton = trigger.querySelector('button');
-          if (actualButton) actualButton.click();
+        const button = trigger?.querySelector('button');
+        if (button instanceof HTMLElement) {
+          button.click();
         }
       }
       return;
